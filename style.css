@@ -1,0 +1,308 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+    /* Filtro de transparencia usando un pseudo-elemento */
+    header::before {
+        content: ""; /*le da existencia (aunque no tenga contenido visible).*/
+        position: absolute; /*permite posicionarlo sobre el header*/
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /*top: 0; left: 0; width: 100%; height: 100%; hace que cubra completamente el header*/
+        background-color: rgba(0, 0, 0, 0.5); /*Agrega una capa oscura y semitransparente sobre el header*/
+        }
+        dialog {
+           
+            z-index: 10;
+        }  
+header {
+    display: flex;
+    color: white;
+    padding: 80px 80px 0 80px;
+    border-bottom: 4px solid hsl(32, 93%, 34%);
+    background-image: url('https://www.dropbox.com/scl/fi/xcv3fcpv87o0nmd3ue0s5/fondo.jpg?rlkey=z393u5ap3lff64bxk7kzzszls&st=rfiwqawz&dl=1');
+    background-size: cover; /* Asegura que la imagen cubra todo el área del header */
+    background-position: center; /* Centra la imagen */
+    /*height: 300px;  Altura del header */
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    }    
+
+/* Estilo del texto */
+header h1, header p , header img{
+position: relative;
+color: white;
+}
+
+header img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+
+}
+header div {
+    text-align: left;
+}
+
+/* Contenedor del menú */
+.menu {
+    background-color: #333;
+    text-align: center;
+}
+
+/* Estilos de los enlaces */
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+/* Cambio de color al pasar el mouse - Seudoclase hover*/
+.menu a:hover {
+    background-color: #ff6600;
+    border-radius: 5px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+}
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+p {
+    font-size: 1.2em;
+}
+.buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.download-section{
+    margin: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.download-section h2, .plans-section h2, .section-tutorials h2{
+    font-size: 1.7em;
+}
+
+.download-section p{
+    font-size: 1em;
+    color: beige;
+    text-align: center;
+    max-width: 70vw; /* Evita que el texto se extienda demasiado en pantallas grandes */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
+    line-height: 1.5; /* Mejora la legibilidad y separación entre líneas */
+
+}
+
+
+.download-button,
+.whatsapp-button {
+    display: inline-block;
+    margin: 30px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.download-button {
+    background-color: #ff6600;
+    color: white;
+    top: 0;
+    left: 0;
+}
+.download-button:hover {
+    background-color: #cc5200;
+}
+.whatsapp-button {
+    background-color: #25d366;
+    color: white;
+}
+.whatsapp-button:hover {
+    background-color: #1caa51;
+}
+.plans-section {
+    padding: 50px 20px;
+    background-color: #111;
+    text-align: center;
+}
+.plans-section h2 { /*Selecciona los h2 dentro de la clase .plans-section */
+    color: #ff6600;
+    margin-bottom: 30px;
+}
+.plans-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.plan {
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.plan .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.plan h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.plan h4 {
+    font-size: 2em;
+    margin: 15px 0;
+}
+.plan ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+.plan ul li {
+    margin: 10px 0;
+}
+.plan a {
+    display:inline-block;
+
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+
+}
+.plan a:hover {
+    background-color: #333;
+}
+.support-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #111;
+    text-align: left;
+}
+.support-section h2 {
+    color: #ff6600;
+}
+.support-section ol {
+    margin-left: 20px;
+}
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+/* Planes de usuario */
+.plan-user-1 {
+    background-color: #ff6f61; /* Rojo */
+}
+.plan-user-2 {
+    background-color: #ff9966; /* Naranja claro */
+}
+.plan-user-3 {
+    background-color: #66cc99; /* Verde */
+}
+.plan-user-4 {
+    background-color: #6699cc; /* Azul */
+}
+
+/* Centrar el iframe (video) */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    }
+    
+    iframe {
+    width: 560px;
+    height: 315px;
+    }
+
+/*SECCION TUTORIALES*/
+.section-tutorials{
+    text-align: center;
+}
+.section-tutorials h2{
+    color: #ff6600;
+}
+
+.section-tutorials-text p{
+font-size: 0.8em;
+}
+
+/* Planes de distribuidor */
+.plan-distributor-1 {
+    background-color: #8e24aa; /* Púrpura claro */
+}
+.plan-distributor-2 {
+    background-color: #d32f2f; /* Rojo */
+}
+.plan-distributor-3 {
+    background-color: #0288d1; /* Azul */
+}
+.plan-distributor-4 {
+    background-color: #388e3c; /* Verde */
+}
+.plan-distributor-5 {
+    background-color: #f57c00; /* Naranja */
+}
+.plan-distributor-6 {
+    background-color: #0288d1; /* Azul */
+}
+
+.contact-section, .info-final{
+    padding: 50px 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+.faqs-section {
+text-align:left ; /* Centra el título */
+margin: 10px; /* Agrega margen a la sección */
+}
+
+.faqs-section p {
+    font-size: 0.9em;
+    }
+
+.faqs-section li {
+     font-size: 1.1em;
+     }
+
